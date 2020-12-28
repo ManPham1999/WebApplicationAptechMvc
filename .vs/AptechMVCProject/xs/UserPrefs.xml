@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{8B1D8B1A-977B-49DC-9A26-04FB9CCDF3AB}|Default">
+  <MonoDevelop.Ide.ItemProperties.AptechMVCProject PreferredExecutionTarget="/Applications/Microsoft Edge.app" />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="AptechMVCProject" expanded="True">
+            <Node name="AptechMVCProject" expanded="True">
+              <Node name="Areas" expanded="True" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>

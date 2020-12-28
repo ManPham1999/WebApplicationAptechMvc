@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<title>@ViewBag.Title</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="~/css/home.css" />
+	<link rel="stylesheet" href="~/css/about.css" />
+	<link rel="stylesheet" href="~/css/product.css" />
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+		integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+</head>
+
+<body>
+	<!-- Header -->
+	<header id="header" class="alt">
+		<div class="logo">
+			<a href="https://khangthinhcoffee.com/" target="_blank"><span>Khang Thịnh</span> Coffee</a>
+		</div>
+		<a href="#menu">Menu</a>
+	</header>
+
+	<!-- Nav -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a asp-controller="Home" asp-action="Index">Home</a></li>
+			<li><a asp-controller="About" asp-action="Index">About</a></li>
+			<li><a asp-controller="Product" asp-action="Index" asp-route-id="cat01">Products</a></li>
+			<li>
+				<a asp-controller="About" asp-action="Index">Chain Store System</a>
+			</li>
+			<li><a asp-controller="About" asp-action="Index">Contact</a></li>
+			<li><a asp-controller="About" asp-action="Index">Hiring</a></li>
+		</ul>
+	</nav>
+
+	<!-- Banner -->
+	<section class="banner full">
+		<article>
+			<img src="~/images/CFS-1.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>Slogan</h2>
+					<p>Cà phê sạch cho cuộc sống thêm xanh.</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="~/images/coffee-background.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>Lịch sử</h2>
+					<p>Thành lập vào năm 1960.</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="~/images/HatCafe.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<h2>Hạt cà phê</h2>
+					<p>Những hạt cà phê nguyên chất từ vùng đất Cao nguyên.</p>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="~/images/shop.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<p>Adipiscing lorem ipsum feugiat sed phasellus consequat</p>
+					<h2>Etiam feugiat</h2>
+				</header>
+			</div>
+		</article>
+		<article>
+			<img src="~/images/office.jpg" alt="" />
+			<div class="inner">
+				<header>
+					<p>Ipsum dolor sed magna veroeros lorem ipsum</p>
+					<h2>Lorem adipiscing</h2>
+				</header>
+			</div>
+		</article>
+	</section>
+	<div>
+		<main role="main" >@RenderBody()</main>
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="container">
+			<ul class="icons">
+				<li>
+					<a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/ngocmy1970" class="icon fa-facebook" target="_blank"><span
+							class="label">Facebook</span></a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a>
+				</li>
+				<li>
+					<a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="copyright">&copy; Khang Thinh Coffee. All rights reserved.</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="~/js/jquery.min.js"></script>
+	<script src="~/js/jquery.scrollex.min.js"></script>
+	<script src="~/js/skel.min.js"></script>
+	<script src="~/js/util.js"></script>
+	<script src="~/js/main.js"></script>
+</body>
+
+</html>

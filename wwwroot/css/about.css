@@ -1,0 +1,71 @@
+
+.about-container {
+    min-height: 100vh;
+    justify-content: space-evenly;
+    display: flex;
+    align-items: center;
+    background-image: url(../images/about-us3.jpg);
+    width: 100%;
+    height: 100%;
+    background-color: black; /* fallback color */
+    background-position: center;
+    background-size: cover;
+    transition: all 0.25s;
+}
+
+.about-group {
+    margin-left: 20px;
+}
+
+.about-elements {
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    display: flex;
+}
+
+.about-elements strong {
+    color: white;
+}
+
+.about-element {
+    font-weight: 500;
+    padding: 20px;
+    background-color: #635C51;
+    border-radius: 20px;
+    color: #ffffff;
+    opacity: 0.5;
+    transition: 0.3s;
+    max-width: 300px;
+    min-height: 330px;
+    margin-bottom: 15px;
+}
+.about-element:hover {
+    color: #635C51;
+    background-color: #ffffff;
+    box-shadow: 5px 10px #3A3835;
+    opacity: 1
+}
+.about-element:hover strong{
+    color: #635C51;
+}
+
+.about-tilte {
+    font-size: 50px;
+    font-weight: 500;
+    min-width: 500px;
+    padding: 20px;
+    background-color: #635C51;
+    border-radius: 20px;
+    max-width: 200px;
+    color: #ffffff;
+    opacity: 0.5;
+    transition: 0.3s;
+}
+
+.about-tilte:hover {
+    color: #635C51;
+    background-color: #ffffff;
+    box-shadow: 5px 10px #3A3835;
+    opacity: 1
+}

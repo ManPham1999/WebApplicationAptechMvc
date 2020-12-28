@@ -1,0 +1,166 @@
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #444444;
+}
+
+ol,
+ul li {
+    margin: 0;
+    padding: 0;
+}
+
+.products {
+    background-color: #F4F4F4;
+    align-items: center;
+    padding: 20px;
+}
+
+.store-body {
+    background-color: #FFFFFF;
+    display: flex;
+    border-radius: 6px;
+}
+
+.menu-left {
+    border-right: 2px solid #F4F4F4;
+    min-width: 15%;
+}
+
+.menu-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 85%;
+}
+
+    .menu-content .product-area {
+        flex-basis: 33%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        max-width: 85%;
+        margin: 20px auto;
+    }
+
+        .menu-content .product-area ul {
+            &:nth-child(3n+1)
+
+{
+    grid-column: 1;
+}
+
+&:nth-child(3n+2) {
+    grid-column: 2;
+}
+
+&:nth-child(3n+3) {
+    grid-column: 3;
+}
+
+&:nth-child(3n+4) {
+    grid-column: 1;
+}
+
+}
+
+
+
+.menu-content .product-area ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    min-width: 250px;
+    min-height: 450px;
+    transition: all 0.25s;
+}
+
+    .menu-content .product-area ul li a {
+        text-decoration: none;
+        color: #000;
+    }
+
+.vnd {
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+
+.menu-content .product-area ul:hover {
+    box-shadow: rgba(183, 185, 185)0px 7px 29px 0px;
+}
+
+.menu-left ul li {
+    margin: 5px;
+    border-radius: 4px;
+    padding: 10px;
+    background-color: white;
+    transition: all 0.25s;
+    align-items: center;
+    text-align: center;
+}
+
+    .menu-left ul li:hover {
+        color: white;
+        background-color: #007FFF;
+    }
+
+.menu-link {
+    align-items: center;
+    justify-content: flex-start;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    min-height: 50px;
+    background-color: #EDEDED;
+}
+
+.icon_menu_link {
+    font-size: 50px;
+    color: tomato;
+}
+
+.menu-link a {
+    margin: 15px;
+    color: #999999;
+    text-decoration: none;
+}
+
+.menu-filter {
+    color: #999999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+    .menu-filter a {
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 4px;
+        color: black;
+    }
+
+        .menu-filter a:hover {
+            color: white;
+            background-color: #0C5CB6;
+        }
+
+.icon_filter {
+    margin-right: 5px;
+}
+
+.phone-image {
+    max-width: 256px;
+    max-height: 363px;
+}

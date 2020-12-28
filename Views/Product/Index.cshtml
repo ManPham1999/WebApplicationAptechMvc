@@ -1,0 +1,55 @@
+@model AptechMVCProject.Entity.ModelView;
+@{
+    ViewBag.Title = "Products Page";
+}
+<div class="menu-link">
+    <a asp-controller="Home" asp-action="Index">Trang chủ</a><i class="icon_menu_link fas fa-angle-right"></i><a asp-controller="Product" asp-action="Index">Sản phẩm</a>
+</div>
+<div class="products">
+    <div class="store-body">
+        <div class="menu-left">
+            <ul>
+                @foreach (var item in Model.catgories)
+                {
+                    <li>
+                        <a asp-controller="Product" asp-action="Details" asp-route-id=@item.CatId >@Html.DisplayFor(ModelItem => item.Name)</a>
+                    </li>
+                }
+            </ul>
+        </div>
+        <div class="menu-content">
+            <div class="menu-filter">
+                <span>Sắp xếp theo</span>
+                <a href=""><i class="icon_filter fas fa-fire"></i>Phổ biến</a>
+                <a href=""><i class="icon_filter fas fa-star-of-life"></i>Bán chạy</a>
+                <a href=""><i class="icon_filter fas fa-star"></i>Hàng mới</a>
+                <a href=""><i class="icon_filter fas fa-sort-amount-down-alt"></i>Giá thấp</a>
+                <a href=""><i class="icon_filter fas fa-sort-amount-down"></i>Giá cao</a>
+            </div>
+            <div class="product-area">
+                @foreach (var item in Model.products)
+                {
+                    if (item.Status.Equals(true))
+                    {
+                        <ul>
+                            <li>
+                                <img class="phone-image"
+                                     src=@item.Img
+                                     alt="">
+                            </li>
+                            <li>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </li>
+                            <li>
+                                @Html.DisplayFor(modelItem => item.Desc)
+                            </li>
+                            <li>
+                                <span class="vnd">@Html.DisplayFor(modelItem => item.Price) đ</span>
+                            </li>
+                        </ul>
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</div>
