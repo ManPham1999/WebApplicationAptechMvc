@@ -781,7 +781,6 @@
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.TagHelpers.input.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.TagHelpers.output.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.RazorCoreGenerate.cache
-/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/Admin/Index.cshtml.g.cs
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/Razor/Views/About/Index.cshtml.g.cs
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/Razor/Views/Product/Details.cshtml.g.cs

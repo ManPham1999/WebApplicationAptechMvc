@@ -15,18 +15,20 @@ namespace AptechMVCProject.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string id)
         {
             ModelView mymodel = new ModelView();
-            mymodel.products = await _context.Products.ToListAsync();
+            var chosenCate = await _context.Catgories.FirstOrDefaultAsync(item => item.CatId == id);
+            var chosenPro = await _context.Products.FindAsync(chosenCate.CoffeeRefId);
+            mymodel.product = chosenPro;
             mymodel.catgories = await _context.Catgories.ToListAsync();
+            mymodel.routeParams = id;
             return View(mymodel);
         }
         public async Task<IActionResult> Details(string id)
         {
             var ahjhj = await _context.Catgories.FirstOrDefaultAsync(item => item.CatId == id);
             var pro = await _context.Products.FindAsync(ahjhj.CoffeeRefId);
-            Console.WriteLine(pro);
             return View(pro);
         }
     }

@@ -14402,11 +14402,6 @@
       "FileKind": "mvc"
     },
     {
-      "FilePath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/Areas/Admin/Views/Admin/Index.cshtml",
-      "TargetPath": "Areas\\Admin\\Views\\Admin\\Index.cshtml",
-      "FileKind": "mvc"
-    },
-    {
       "FilePath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/Views/Shared/_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"

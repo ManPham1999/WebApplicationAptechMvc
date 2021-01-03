@@ -36,4 +36,7 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
     </Content>
   </ItemGroup>
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Areas\Admin\Views\Admin\Index.cshtml" />
+  </ItemGroup>
 </Project>

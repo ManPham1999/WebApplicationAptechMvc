@@ -55,9 +55,7 @@ namespace AptechMVCProject
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
-                endpoints.MapControllerRoute(
-                    name: "areas",
-                    pattern: "Admin/{controller}/{action}/{id?}");
+                
             });
         }
     }

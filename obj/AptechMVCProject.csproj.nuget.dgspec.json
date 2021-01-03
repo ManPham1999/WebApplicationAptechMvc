@@ -14,14 +14,13 @@
         "outputPath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/macintoshhd/.config/NuGet/NuGet.Config"
+          "/Users/macintoshhd/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {},
-          "https://nuget.telerik.com/nuget": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "netcoreapp3.1": {
