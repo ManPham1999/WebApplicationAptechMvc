@@ -24,15 +24,6 @@ namespace AptechMVCProject.Migrations
                     b.Property<string>("CatId")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<Guid?>("CoffeeId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CoffeeRefId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<bool>("IsSelected")
-                        .HasColumnType("bit");
-
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
@@ -40,8 +31,6 @@ namespace AptechMVCProject.Migrations
                         .HasColumnType("bit");
 
                     b.HasKey("CatId");
-
-                    b.HasIndex("CoffeeId");
 
                     b.ToTable("Catgories");
                 });
@@ -51,6 +40,9 @@ namespace AptechMVCProject.Migrations
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CatgoryRefId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Desc")
                         .HasColumnType("nvarchar(max)");
@@ -73,13 +65,6 @@ namespace AptechMVCProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Products");
-                });
-
-            modelBuilder.Entity("AptechMVCProject.Entity.Catgory", b =>
-                {
-                    b.HasOne("AptechMVCProject.Entity.Product", "Coffee")
-                        .WithMany()
-                        .HasForeignKey("CoffeeId");
                 });
 #pragma warning restore 612, 618
         }

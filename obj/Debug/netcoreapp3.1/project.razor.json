@@ -14435,6 +14435,11 @@
       "FilePath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/Views/Product/Details.cshtml",
       "TargetPath": "Views\\Product\\Details.cshtml",
       "FileKind": "mvc"
+    },
+    {
+      "FilePath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/Views/Card/Index.cshtml",
+      "TargetPath": "Views\\Card\\Index.cshtml",
+      "FileKind": "mvc"
     }
   ],
   "SerializationFormat": "0.2"

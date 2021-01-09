@@ -9,6 +9,7 @@
       <e p="bin" t="ExcludeRecursive" />
       <e p="Controllers" t="Include">
         <e p="AboutController.cs" t="Include" />
+        <e p="CardController.cs" t="Include" />
         <e p="HomeController.cs" t="Include" />
         <e p="ProductController.cs" t="Include" />
       </e>
@@ -19,10 +20,8 @@
       </e>
       <e p="MainDbContext.cs" t="Include" />
       <e p="Migrations" t="Include">
-        <e p="20201226080729_initialCreate.cs" t="Include" />
-        <e p="20201226080729_initialCreate.Designer.cs" t="Include" />
-        <e p="20201226080900_secondCreate.cs" t="Include" />
-        <e p="20201226080900_secondCreate.Designer.cs" t="Include" />
+        <e p="20210108125559_initialCreate.cs" t="Include" />
+        <e p="20210108125559_initialCreate.Designer.cs" t="Include" />
         <e p="MainDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
@@ -41,12 +40,20 @@
       <e p="Properties" t="Include">
         <e p="launchSettings.json" t="Include" />
       </e>
+      <e p="Repository" t="Include">
+        <e p="IProductRepository.cs" t="Include" />
+        <e p="ProductRepository.cs" t="Include" />
+      </e>
       <e p="Startup.cs" t="Include" />
       <e p="Views" t="Include">
         <e p="_ViewImports.cshtml" t="Include" />
         <e p="_ViewStart.cshtml" t="Include" />
         <e p="About" t="Include">
           <e p="Index.cshtml" t="Include" />
+        </e>
+        <e p="Card" t="Include">
+          <e p="Index.cshtml" t="Include" />
+          <e p="Index.cshtml.cs" t="Include" />
         </e>
         <e p="Home" t="Include">
           <e p="Index.cshtml" t="Include" />

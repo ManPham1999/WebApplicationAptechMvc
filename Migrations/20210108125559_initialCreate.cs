@@ -8,6 +8,19 @@ namespace AptechMVCProject.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
+                name: "Catgories",
+                columns: table => new
+                {
+                    CatId = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: true),
+                    Status = table.Column<bool>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Catgories", x => x.CatId);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Products",
                 columns: table => new
                 {
@@ -17,7 +30,8 @@ namespace AptechMVCProject.Migrations
                     Status = table.Column<bool>(nullable: false),
                     Quantity = table.Column<double>(nullable: false),
                     Img = table.Column<string>(nullable: true),
-                    Desc = table.Column<string>(nullable: true)
+                    Desc = table.Column<string>(nullable: true),
+                    CatgoryRefId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -27,6 +41,9 @@ namespace AptechMVCProject.Migrations
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.DropTable(
+                name: "Catgories");
+
             migrationBuilder.DropTable(
                 name: "Products");
         }

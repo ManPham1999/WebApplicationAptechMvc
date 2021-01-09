@@ -11,9 +11,9 @@
             <ul>
                 @foreach (var item in Model.catgories)
                 {
-                    var ChosenStyle = item.CatId == Model.routeParams ? "color : red" : "";
+                    var chosenStyle = item.CatId == Model.routeParamsString ? "color : red" : "";
                     <li>
-                        <a asp-controller="Product" asp-action="Index" asp-route-id=@item.CatId style=@ChosenStyle>@Html.DisplayFor(ModelItem => item.Name)</a>
+                        <a asp-controller="Product" asp-action="Index" asp-route-id=@item.CatId style=@chosenStyle>@Html.DisplayFor(ModelItem => item.Name)</a>
                     </li>
                 }
             </ul>
@@ -28,23 +28,26 @@
                 <a href=""><i class="icon_filter fas fa-sort-amount-down"></i>Giá cao</a>
             </div>
             <div class="product-area">
-                @{
-                    if (Model.product.Status.Equals(true))
+                @foreach (var item in Model.products)
+                {
+                    if (item.Status.Equals(true))
                     {
                         <ul>
                             <li>
-                                <img class="phone-image"
-                                     src=@Model.product.Img
-                                     alt="">
+                                <a asp-controller="Product" asp-action="Details" asp-route-id=@item.Id>
+                                    <img class="phone-image"
+                                         src=@item.Img
+                                         alt="">
+                                </a>
                             </li>
                             <li>
-                                @Model.product.Name
+                                @item.Name
                             </li>
                             <li>
-                                @Model.product.Desc
+                                @item.Desc
                             </li>
                             <li>
-                                <span class="vnd">@Model.product.Price đ</span>
+                                <span class="vnd">@item.Price đ</span>
                             </li>
                         </ul>
                     }

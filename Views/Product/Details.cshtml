@@ -1,16 +1,16 @@
-﻿@model AptechMVCProject.Entity.Product;
+﻿@model AptechMVCProject.Entity.ModelView;
 @{
     ViewBag.Title = "Detail Page";
 }
 <div>
     <h1>Thông tin chi tiêt sản phẩm</h1>
     <p>
-        Tên sản phẩm: @Html.DisplayFor(modelItem => Model.Name)
+        Tên sản phẩm: @Model.product.Result.Name
     </p>
     <p>
-        Mô tả sản phẩm: @Html.DisplayFor(modelItem => Model.Desc)
+        Mô tả sản phẩm:@Model.product.Result.Desc
     </p>
     <p>
-        Hình ảnh sản phẩm:  <img class="phone-image"src=@Model.Img alt="">
+        Hình ảnh sản phẩm:  <img class="phone-image"src=@Model.product.Result.Img alt="">
     </p>
 </div>
