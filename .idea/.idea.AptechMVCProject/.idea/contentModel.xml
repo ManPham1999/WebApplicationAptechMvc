@@ -14,14 +14,19 @@
         <e p="ProductController.cs" t="Include" />
       </e>
       <e p="Entity" t="Include">
+        <e p="Cart.cs" t="Include" />
+        <e p="CartDetails.cs" t="Include" />
+        <e p="CartType.cs" t="Include" />
         <e p="Catgory.cs" t="Include" />
         <e p="ModelView.cs" t="Include" />
         <e p="Product.cs" t="Include" />
+        <e p="ProductListInCart.cs" t="Include" />
+        <e p="User.cs" t="Include" />
       </e>
       <e p="MainDbContext.cs" t="Include" />
       <e p="Migrations" t="Include">
-        <e p="20210112052255_initialCreate.cs" t="Include" />
-        <e p="20210112052255_initialCreate.Designer.cs" t="Include" />
+        <e p="20210113132336_InitialCreate.cs" t="Include" />
+        <e p="20210113132336_InitialCreate.Designer.cs" t="Include" />
         <e p="MainDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
@@ -78,6 +83,7 @@
           <e p="site.css" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
+        <e p="favicon_logo.ico" t="Include" />
         <e p="fonts" t="Include">
           <e p="fontawesome-webfont.eot" t="Include" />
           <e p="fontawesome-webfont.svg" t="Include" />
@@ -99,6 +105,15 @@
           <e p="CFS-1.jpg" t="Include" />
           <e p="CFS-2.jpg" t="Include" />
           <e p="coffee-background.jpg" t="Include" />
+          <e p="detail-product" t="Include">
+            <e p="arrow-left.png" t="Include" />
+            <e p="arrow-right.png" t="Include" />
+            <e p="img01.jpg" t="Include" />
+            <e p="img02.jpg" t="Include" />
+            <e p="img03.jpeg" t="Include" />
+            <e p="img04.jpeg" t="Include" />
+            <e p="img05.jpeg" t="Include" />
+          </e>
           <e p="HatCafe.jpg" t="Include" />
           <e p="KT.jpg" t="Include" />
           <e p="KT3.png" t="Include" />
