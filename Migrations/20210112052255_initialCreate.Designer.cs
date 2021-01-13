@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AptechMVCProject.Migrations
 {
     [DbContext(typeof(MainDbContext))]
-    [Migration("20210108125559_initialCreate")]
+    [Migration("20210112052255_initialCreate")]
     partial class initialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -43,6 +43,9 @@ namespace AptechMVCProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CatgoryCatId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("CatgoryRefId")
                         .HasColumnType("nvarchar(max)");
 
@@ -66,7 +69,16 @@ namespace AptechMVCProject.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CatgoryCatId");
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("AptechMVCProject.Entity.Product", b =>
+                {
+                    b.HasOne("AptechMVCProject.Entity.Catgory", "Catgory")
+                        .WithMany("Coffees")
+                        .HasForeignKey("CatgoryCatId");
                 });
 #pragma warning restore 612, 618
         }

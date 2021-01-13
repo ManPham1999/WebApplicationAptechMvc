@@ -17,7 +17,7 @@ namespace AptechMVCProject.Entity
         public double Quantity { get; set; }
         public string Img { get; set; }
         public string Desc { get; set; }
-        [ForeignKey("Category")]
         public string CatgoryRefId { get; set; }
+        public Catgory Catgory { get; set; }
     }
 }

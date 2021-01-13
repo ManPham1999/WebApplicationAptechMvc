@@ -401,7 +401,6 @@
 /Users/macintoshhd/Projects/AptechMVCProject/obj/Debug/netcoreapp3.1/AptechMVCProject.genruntimeconfig.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/appsettings.Development.json
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/appsettings.json
-/Users/macintoshhd/Desktop/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/Properties/launchSettings.json
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/AptechMVCProject.deps.json
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/AptechMVCProject.runtimeconfig.json
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/AptechMVCProject.runtimeconfig.dev.json
@@ -777,6 +776,9 @@
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.MvcApplicationPartsAssemblyInfo.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.RazorAssemblyInfo.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.RazorAssemblyInfo.cs
+/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/staticwebassets/AptechMVCProject.StaticWebAssets.Manifest.cache
+/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/staticwebassets/AptechMVCProject.StaticWebAssets.xml
+/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/scopedcss/bundle/AptechMVCProject.styles.css
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.TagHelpers.input.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.TagHelpers.output.cache
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.RazorCoreGenerate.cache
@@ -794,8 +796,6 @@
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.RazorTargetAssemblyInfo.cs
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.Views.pdb
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.csproj.CopyComplete
-/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/staticwebassets/AptechMVCProject.StaticWebAssets.Manifest.cache
-/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/staticwebassets/AptechMVCProject.StaticWebAssets.xml
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.dll
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.pdb
 /Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.genruntimeconfig.cache

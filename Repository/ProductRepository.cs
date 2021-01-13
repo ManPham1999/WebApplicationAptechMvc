@@ -28,7 +28,7 @@ namespace AptechMVCProject.Repository
 
         public IQueryable<Product> GetProductByCatgoryId(string catId)
         {
-            IQueryable<Product> chosenPro =  _db.Products.Where(p => p.CatgoryRefId == catId);
+            IQueryable<Product> chosenPro =  _db.Products.Where(p => p.Catgory.CatId == catId);
             return chosenPro;
         }
 

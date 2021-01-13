@@ -41,6 +41,9 @@ namespace AptechMVCProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CatgoryCatId")
+                        .HasColumnType("nvarchar(450)");
+
                     b.Property<string>("CatgoryRefId")
                         .HasColumnType("nvarchar(max)");
 
@@ -64,7 +67,16 @@ namespace AptechMVCProject.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CatgoryCatId");
+
                     b.ToTable("Products");
+                });
+
+            modelBuilder.Entity("AptechMVCProject.Entity.Product", b =>
+                {
+                    b.HasOne("AptechMVCProject.Entity.Catgory", "Catgory")
+                        .WithMany("Coffees")
+                        .HasForeignKey("CatgoryCatId");
                 });
 #pragma warning restore 612, 618
         }

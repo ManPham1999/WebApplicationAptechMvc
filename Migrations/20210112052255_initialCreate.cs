@@ -31,21 +31,33 @@ namespace AptechMVCProject.Migrations
                     Quantity = table.Column<double>(nullable: false),
                     Img = table.Column<string>(nullable: true),
                     Desc = table.Column<string>(nullable: true),
-                    CatgoryRefId = table.Column<string>(nullable: true)
+                    CatgoryRefId = table.Column<string>(nullable: true),
+                    CatgoryCatId = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Products", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Products_Catgories_CatgoryCatId",
+                        column: x => x.CatgoryCatId,
+                        principalTable: "Catgories",
+                        principalColumn: "CatId",
+                        onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Products_CatgoryCatId",
+                table: "Products",
+                column: "CatgoryCatId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "Catgories");
+                name: "Products");
 
             migrationBuilder.DropTable(
-                name: "Products");
+                name: "Catgories");
         }
     }
 }

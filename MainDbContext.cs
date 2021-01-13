@@ -10,7 +10,6 @@ namespace AptechMVCProject
         {
 
         }
-
         public DbSet<Product> Products { get; set; }
         public DbSet<Catgory> Catgories { get; set; }
     }

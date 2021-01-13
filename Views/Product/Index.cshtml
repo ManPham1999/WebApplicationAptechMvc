@@ -13,7 +13,7 @@
                 {
                     var chosenStyle = item.CatId == Model.routeParamsString ? "color : red" : "";
                     <li>
-                        <a asp-controller="Product" asp-action="Index" asp-route-id=@item.CatId style=@chosenStyle>@Html.DisplayFor(ModelItem => item.Name)</a>
+                        <a asp-controller="Product" asp-action="Index" asp-route-id=@item.CatId style=@chosenStyle>@Html.DisplayFor(modelItem => item.Name)</a>
                     </li>
                 }
             </ul>
