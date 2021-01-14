@@ -32,6 +32,11 @@ namespace AptechMVCProject.Repository
             return chosenPro;
         }
 
+        public async Task<IEnumerable<Product>> GetAllProducts()
+        {
+           return await _db.Products.Include(c => c.Catgory).ToListAsync();
+        }
+
         public async Task<Product> GetProductById(Guid proId)
         {
             var chosenPro = await _db.Products.FindAsync(proId);
@@ -43,10 +48,7 @@ namespace AptechMVCProject.Repository
             throw new NotImplementedException();
         }
 
-        async Task<IEnumerable<Product>> IProductRepository.GetAllProducts()
-        {
-            return await _db.Products.ToListAsync();
-        }
+        
         
     }
 }

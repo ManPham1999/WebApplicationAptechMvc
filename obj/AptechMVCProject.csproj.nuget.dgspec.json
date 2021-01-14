@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/AptechMVCProject.csproj": {}
+    "/Users/macintoshhd/WebApplicationAptechMvc/AptechMVCProject.csproj": {}
   },
   "projects": {
-    "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/AptechMVCProject.csproj": {
+    "/Users/macintoshhd/WebApplicationAptechMvc/AptechMVCProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/AptechMVCProject.csproj",
+        "projectUniqueName": "/Users/macintoshhd/WebApplicationAptechMvc/AptechMVCProject.csproj",
         "projectName": "AptechMVCProject",
-        "projectPath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/AptechMVCProject.csproj",
+        "projectPath": "/Users/macintoshhd/WebApplicationAptechMvc/AptechMVCProject.csproj",
         "packagesPath": "/Users/macintoshhd/.nuget/packages/",
-        "outputPath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/",
+        "outputPath": "/Users/macintoshhd/WebApplicationAptechMvc/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macintoshhd/.nuget/NuGet/NuGet.Config"
