@@ -15,8 +15,6 @@ namespace AptechMVCProject
         public DbSet<User> Users { get; set; }
         public DbSet<Cart> Carts { get; set; }
         public DbSet<CartType> CartTypes { get; set; }
-        public DbSet<CartDetails> Detailses { get; set; }
-        public DbSet<ProductListInCart> ProductListInCarts { get; set; }
-        
+        public DbSet<CartLine> CartLines { get; set; }
     }
 }

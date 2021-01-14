@@ -79,13 +79,10 @@ namespace AptechMVCProject.Migrations
                 {
                     Id = table.Column<Guid>(nullable: false),
                     UserRefId = table.Column<string>(nullable: true),
-                    CardDetail = table.Column<string>(nullable: true),
                     UserId = table.Column<Guid>(nullable: true),
                     CardTypeRefId = table.Column<string>(nullable: true),
                     CardTypeId = table.Column<Guid>(nullable: true),
-                    IsActive = table.Column<bool>(nullable: false),
-                    CreatedDate = table.Column<DateTime>(nullable: false),
-                    TotalMoney = table.Column<double>(nullable: false)
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -105,50 +102,42 @@ namespace AptechMVCProject.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Detailses",
+                name: "CartLines",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(nullable: false),
+                    ID = table.Column<Guid>(nullable: false),
                     CartRefId = table.Column<string>(nullable: true),
-                    CartId = table.Column<Guid>(nullable: true)
+                    CartId = table.Column<Guid>(nullable: true),
+                    ProductId = table.Column<Guid>(nullable: true),
+                    Quantity = table.Column<int>(nullable: false),
+                    IsActive = table.Column<bool>(nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Detailses", x => x.Id);
+                    table.PrimaryKey("PK_CartLines", x => x.ID);
                     table.ForeignKey(
-                        name: "FK_Detailses_Carts_CartId",
+                        name: "FK_CartLines_Carts_CartId",
                         column: x => x.CartId,
                         principalTable: "Carts",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "ProductListInCarts",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(nullable: false),
-                    ProductRefId = table.Column<string>(nullable: true),
-                    ProductId = table.Column<Guid>(nullable: true),
-                    Quantity = table.Column<int>(nullable: false),
-                    CartDetailsId = table.Column<Guid>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_ProductListInCarts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_ProductListInCarts_Detailses_CartDetailsId",
-                        column: x => x.CartDetailsId,
-                        principalTable: "Detailses",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        name: "FK_ProductListInCarts_Products_ProductId",
+                        name: "FK_CartLines_Products_ProductId",
                         column: x => x.ProductId,
                         principalTable: "Products",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartLines_CartId",
+                table: "CartLines",
+                column: "CartId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_CartLines_ProductId",
+                table: "CartLines",
+                column: "ProductId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Carts_CardTypeId",
@@ -161,21 +150,6 @@ namespace AptechMVCProject.Migrations
                 column: "UserId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Detailses_CartId",
-                table: "Detailses",
-                column: "CartId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProductListInCarts_CartDetailsId",
-                table: "ProductListInCarts",
-                column: "CartDetailsId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_ProductListInCarts_ProductId",
-                table: "ProductListInCarts",
-                column: "ProductId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Products_CatgoryCatId",
                 table: "Products",
                 column: "CatgoryCatId");
@@ -184,25 +158,22 @@ namespace AptechMVCProject.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "ProductListInCarts");
-
-            migrationBuilder.DropTable(
-                name: "Detailses");
-
-            migrationBuilder.DropTable(
-                name: "Products");
+                name: "CartLines");
 
             migrationBuilder.DropTable(
                 name: "Carts");
 
             migrationBuilder.DropTable(
-                name: "Catgories");
+                name: "Products");
 
             migrationBuilder.DropTable(
                 name: "CartTypes");
 
             migrationBuilder.DropTable(
                 name: "Users");
+
+            migrationBuilder.DropTable(
+                name: "Catgories");
         }
     }
 }

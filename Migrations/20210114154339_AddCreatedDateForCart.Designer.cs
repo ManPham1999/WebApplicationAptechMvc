@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace AptechMVCProject.Migrations
 {
     [DbContext(typeof(MainDbContext))]
-    [Migration("20210113132336_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20210114154339_AddCreatedDateForCart")]
+    partial class AddCreatedDateForCart
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -27,9 +27,6 @@ namespace AptechMVCProject.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CardDetail")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid?>("CardTypeId")
                         .HasColumnType("uniqueidentifier");
 
@@ -41,9 +38,6 @@ namespace AptechMVCProject.Migrations
 
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
-
-                    b.Property<double>("TotalMoney")
-                        .HasColumnType("float");
 
                     b.Property<Guid?>("UserId")
                         .HasColumnType("uniqueidentifier");
@@ -60,7 +54,7 @@ namespace AptechMVCProject.Migrations
                     b.ToTable("Carts");
                 });
 
-            modelBuilder.Entity("AptechMVCProject.Entity.CartDetails", b =>
+            modelBuilder.Entity("AptechMVCProject.Entity.CartLine", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -72,11 +66,22 @@ namespace AptechMVCProject.Migrations
                     b.Property<string>("CartRefId")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid?>("ProductId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
                     b.HasIndex("CartId");
 
-                    b.ToTable("Detailses");
+                    b.HasIndex("ProductId");
+
+                    b.ToTable("CartLines");
                 });
 
             modelBuilder.Entity("AptechMVCProject.Entity.CartType", b =>
@@ -149,33 +154,6 @@ namespace AptechMVCProject.Migrations
                     b.ToTable("Products");
                 });
 
-            modelBuilder.Entity("AptechMVCProject.Entity.ProductListInCart", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("CartDetailsId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("ProductId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("ProductRefId")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("Quantity")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CartDetailsId");
-
-                    b.HasIndex("ProductId");
-
-                    b.ToTable("ProductListInCarts");
-                });
-
             modelBuilder.Entity("AptechMVCProject.Entity.User", b =>
                 {
                     b.Property<Guid>("Id")
@@ -206,15 +184,19 @@ namespace AptechMVCProject.Migrations
                         .HasForeignKey("CardTypeId");
 
                     b.HasOne("AptechMVCProject.Entity.User", "User")
-                        .WithMany("Carts")
+                        .WithMany()
                         .HasForeignKey("UserId");
                 });
 
-            modelBuilder.Entity("AptechMVCProject.Entity.CartDetails", b =>
+            modelBuilder.Entity("AptechMVCProject.Entity.CartLine", b =>
                 {
                     b.HasOne("AptechMVCProject.Entity.Cart", "Cart")
-                        .WithMany("CartDetailses")
+                        .WithMany()
                         .HasForeignKey("CartId");
+
+                    b.HasOne("AptechMVCProject.Entity.Product", "Product")
+                        .WithMany()
+                        .HasForeignKey("ProductId");
                 });
 
             modelBuilder.Entity("AptechMVCProject.Entity.Product", b =>
@@ -222,17 +204,6 @@ namespace AptechMVCProject.Migrations
                     b.HasOne("AptechMVCProject.Entity.Catgory", "Catgory")
                         .WithMany("Coffees")
                         .HasForeignKey("CatgoryCatId");
-                });
-
-            modelBuilder.Entity("AptechMVCProject.Entity.ProductListInCart", b =>
-                {
-                    b.HasOne("AptechMVCProject.Entity.CartDetails", null)
-                        .WithMany("ProductListInCarts")
-                        .HasForeignKey("CartDetailsId");
-
-                    b.HasOne("AptechMVCProject.Entity.Product", "Product")
-                        .WithMany()
-                        .HasForeignKey("ProductId");
                 });
 #pragma warning restore 612, 618
         }

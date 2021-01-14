@@ -18,18 +18,19 @@
       </e>
       <e p="Entity" t="Include">
         <e p="Cart.cs" t="Include" />
-        <e p="CartDetails.cs" t="Include" />
+        <e p="CartLine.cs" t="Include" />
         <e p="CartType.cs" t="Include" />
         <e p="Catgory.cs" t="Include" />
         <e p="ModelView.cs" t="Include" />
         <e p="Product.cs" t="Include" />
-        <e p="ProductListInCart.cs" t="Include" />
         <e p="User.cs" t="Include" />
       </e>
       <e p="MainDbContext.cs" t="Include" />
       <e p="Migrations" t="Include">
-        <e p="20210114043205_InitialCreate.cs" t="Include" />
-        <e p="20210114043205_InitialCreate.Designer.cs" t="Include" />
+        <e p="20210114090357_InitialCreate.cs" t="Include" />
+        <e p="20210114090357_InitialCreate.Designer.cs" t="Include" />
+        <e p="20210114154339_AddCreatedDateForCart.cs" t="Include" />
+        <e p="20210114154339_AddCreatedDateForCart.Designer.cs" t="Include" />
         <e p="MainDbContextModelSnapshot.cs" t="Include" />
       </e>
       <e p="Models" t="Include">

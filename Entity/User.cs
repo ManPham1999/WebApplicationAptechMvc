@@ -12,6 +12,5 @@ namespace AptechMVCProject.Entity
         public string  Password { get; set; }
         public bool IsActive { get; set; }
         public bool Gender { get; set; }
-        public List<Cart> Carts { get; set; }
     }
 }
