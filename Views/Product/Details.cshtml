@@ -2,15 +2,75 @@
 @{
     ViewBag.Title = "Detail Page";
 }
-<div>
-    <h1>Thông tin chi tiêt sản phẩm</h1>
-    <p>
-        Tên sản phẩm: @Model.product.Result.Name
-    </p>
-    <p>
-        Mô tả sản phẩm:@Model.product.Result.Desc
-    </p>
-    <p>
-        Hình ảnh sản phẩm:  <img class="phone-image"src=@Model.product.Result.Img alt="">
-    </p>
-</div>
+<section class="p-detail__sc1">
+    <div class="l-container">
+        <div class="c-detail c-flexblock">
+            <div class="c-detail_img c-col5">
+                <img id=featured src="~/images/detail-product/img01.jpg">
+
+
+            </div>
+            <div class="c-detail_inner c-col5">
+                <h3 class="c-detail_name">
+                    Cà Phê Arabica Cầu Đất DalatFarm - Túi 250gr (Dạng Bột)<h3>
+                        <div class="c-detail_price">
+                            <span class="c-price_text1">Giá: </span>
+                            <span class="c-price_text2">100000</span>
+                            <span class="c-price_text3">vnd</span>
+                        </div>
+                        <div class="selector-actions">
+                            <div class="buttons_added">
+                                <input class="minus is-form" type="button" value="-">
+                                <input aria-label="quantity" class="input-qty" max="50" min="1" name="" type="number" value="1">
+                                <input class="plus is-form" type="button" value="+">
+                            </div>
+                            <div class="wrap-addcart clearfix">
+                                <button type="button" id="add-to-cart" class="add-to-cartProduct button dark btn-addtocart addtocart-modal" name="add">Thêm vào giỏ</button>
+                                <button type="button" id="buy-now" class="add-to-cartProduct button dark btn-addtocart addtocart-modal hidden" name="add" style="display: inline-block;">Mua ngay</button>
+                            </div>
+                        </div>
+
+            </div>
+            <script>
+    //<![CDATA[
+                $('input.input-qty').each(function () {
+                    var $this = $(this),
+                        qty = $this.parent().find('.is-form'),
+                        min = Number($this.attr('min')),
+                        max = Number($this.attr('max'))
+                    if (min == 0) {
+                        var d = 0
+                    } else d = min
+                    $(qty).on('click', function () {
+                        if ($(this).hasClass('minus')) {
+                            if (d > min) d += -1
+                        } else if ($(this).hasClass('plus')) {
+                            var x = Number($this.val()) + 1
+                            if (x <= max) d += 1
+                        }
+                        $this.attr('value', d).val(d)
+                    })
+                })
+//]]></script>
+        </div>
+        <div class="c-description">
+            <span class="c-description__title1">Nguồn gốc sản phẩm</span>
+            • Cà phê Arabica Cầu Đất được trồng từ vùng nguyên liệu cà phê Cầu Đất - Đà Lạt, nơi được mệnh danh là thủ phủ Arabica, cho chất lượng lâu đời tại Việt Nam. Nằm trên độ cao hơn 1600m so với mực nước biển, Cầu Đất có khí hậu ôn hoà quanh năm, thổ nhưỡng Bazan màu mỡ đã tạo nên những đồi cà phê có hương thơm và phẩm chất rất riêng biệt.
+            <br />
+            • 100% cà phê Arabica chín cây, được tuyển chọn kỹ càng, hạt to, chín đỏ mọng, phơi vòm, ngon tuyệt hảo. Quy trình chế biến được kiểm soát chặt chẽ, rang xay mộc nguyên chất theo phương pháp truyền thống.
+            <br />
+            • Cà phê Arabica mang hương thơm ngất ngây, vị chua để lại hậu vị ngòn ngọt sau uống làm say lòng những người thưởng thức khó tính nhất. Thích hợp gu sành cà phê, ưu thích sự độc đáo và uống được vị chua. Dùng pha máy Espresso hoặc pha phin đều được.
+            <span class="c-description__title1"> Thông tin chi tiết sản phẩm:</span>
+            <br />
+            • Thành phần: 100% từ những trái cà phê Arabica chín cây thượng hạng từ vùng nguyên liệu cà phê Cầu Đất - Đà Lạt tốt nhất Việt Nam.
+            <br />• Hương vị: vị chua thanh xen lẫn đắng nhẹ cùng hương thơm nhẹ nhàng.
+            <br /> • Hướng dẫn sử dụng: tráng nhẹ phin, cho lượng cà phê khoảng 10-15gr, thêm vào 20ml nước sôi và chờ 20-25 giây. Rót nhẹ nhàng thêm nước vào phin đến khi lượng nước đạt vừa sở thích. Lấy phin ra, có thể thêm đường / sữa và đá tuỳ thích.
+            <br />• Thông tin cảnh báo an toàn vệ sinh: không sử dụng khi sản phẩm có hiện tượng nấm mốc, mùi lạ.
+            <br />• Quy cách đóng gói: túi Kraft mộc tráng thiếc bên trong  giúp giữ hương vị cà phê được lâu, thân thiện với môi trường.
+            <br />
+            <br />• Ngày sản xuất: xem trên bao bì.
+            <br />• Hạn sử dụng: 12 tháng kể từ ngày sản xuất.
+            <br />• Nguồn gốc: sản phẩm DalatFarm - Việt Nam.
+        </div>
+    </div>
+</section>
