@@ -2,15 +2,58 @@
 @{
     ViewBag.Title = "Detail Page";
 }
-<div>
-    <h1>Thông tin chi tiêt sản phẩm</h1>
-    <p>
-        Tên sản phẩm: @Model.product.Result.Name
-    </p>
-    <p>
-        Mô tả sản phẩm:@Model.product.Result.Desc
-    </p>
-    <p>
-        Hình ảnh sản phẩm:  <img class="phone-image"src=@Model.product.Result.Img alt="">
-    </p>
-</div>
+<section class="p-detail__sc1">
+    <div class="l-container">
+        <div class="c-detail c-flexblock">
+            <div class="c-detail_img c-col5">
+                <img id=featured src=@Model.product.Result.Img>
+            </div>
+            <div class="c-detail_inner c-col5">
+                <h3 class="c-detail_name">@Model.product.Result.Name</h3>
+                <div class="c-detail_price">
+                    <span class="c-price_text1">Giá: </span>
+                    <span class="c-price_text2">@Model.product.Result.Price.000</span>
+                    <span class="c-price_text3">vnd</span>
+                </div>
+                <div class="selector-actions">
+                    <div class="buttons_added">
+                        <input class="minus is-form" type="button" value="-">
+                        <input aria-label="quantity" class="input-qty" max="50" min="1" name="" type="number" value="1">
+                        <input class="plus is-form" type="button" value="+">
+                    </div>
+                    <div class="wrap-addcart clearfix">
+                        <button type="button" id="add-to-cart" class="add-to-cartProduct button dark btn-addtocart addtocart-modal" name="add">Thêm vào giỏ</button>
+                        <button type="button" id="buy-now" class="add-to-cartProduct button dark btn-addtocart addtocart-modal hidden" name="add" style="display: inline-block;">Mua ngay</button>
+                    </div>
+                </div>
+
+            </div>
+            <script>
+    //<![CDATA[
+                $('input.input-qty').each(function () {
+                    var $this = $(this),
+                        qty = $this.parent().find('.is-form'),
+                        min = Number($this.attr('min')),
+                        max = Number($this.attr('max'))
+                    if (min == 0) {
+                        var d = 0
+                    } else d = min
+                    $(qty).on('click', function () {
+                        if ($(this).hasClass('minus')) {
+                            if (d > min) d += -1
+                        } else if ($(this).hasClass('plus')) {
+                            var x = Number($this.val()) + 1
+                            if (x <= max) d += 1
+                        }
+                        $this.attr('value', d).val(d)
+                    })
+                })
+//]]></script>
+        </div>
+        <div class="c-description">
+            <span class="c-description__title1">Nguồn gốc sản phẩm</span>
+            @Model.product.Result.Desc
+            <br/>
+        </div>
+    </div>
+</section>
