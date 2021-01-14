@@ -1,10 +1,10 @@
 ﻿{
   "version": "1.0.0",
   "restore": {
-    "projectUniqueName": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/AptechMVCProject.csproj",
+    "projectUniqueName": "/Users/macintoshhd/WebApplicationAptechMvc/AptechMVCProject.csproj",
     "projectName": "AptechMVCProject",
-    "projectPath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/AptechMVCProject.csproj",
-    "outputPath": "/Users/macintoshhd/Desktop/WebApplicationAptechMvc/obj/",
+    "projectPath": "/Users/macintoshhd/WebApplicationAptechMvc/AptechMVCProject.csproj",
+    "outputPath": "/Users/macintoshhd/WebApplicationAptechMvc/obj/",
     "projectStyle": "PackageReference",
     "originalTargetFrameworks": [
       "netcoreapp3.1"

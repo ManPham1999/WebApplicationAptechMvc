@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
+    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$/../Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
+    <e p="$PROJECT_DIR$/../Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_AptechMVCProject.-347645517.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeRecursive">
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
@@ -78,6 +81,7 @@
           <e p="site.css" t="Include" />
         </e>
         <e p="favicon.ico" t="Include" />
+        <e p="favicon_logo.ico" t="Include" />
         <e p="fonts" t="Include">
           <e p="fontawesome-webfont.eot" t="Include" />
           <e p="fontawesome-webfont.svg" t="Include" />
@@ -99,6 +103,15 @@
           <e p="CFS-1.jpg" t="Include" />
           <e p="CFS-2.jpg" t="Include" />
           <e p="coffee-background.jpg" t="Include" />
+          <e p="detail-product" t="Include">
+            <e p="arrow-left.png" t="Include" />
+            <e p="arrow-right.png" t="Include" />
+            <e p="img01.jpg" t="Include" />
+            <e p="img02.jpg" t="Include" />
+            <e p="img03.jpeg" t="Include" />
+            <e p="img04.jpeg" t="Include" />
+            <e p="img05.jpeg" t="Include" />
+          </e>
           <e p="HatCafe.jpg" t="Include" />
           <e p="KT.jpg" t="Include" />
           <e p="KT3.png" t="Include" />
@@ -183,8 +196,5 @@
         </e>
       </e>
     </e>
-    <e p="$APPLICATION_CONFIG_DIR$/scratches" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_AptechMVCProject.-2019145018.00" t="ExcludeRecursive" />
   </component>
 </project>
