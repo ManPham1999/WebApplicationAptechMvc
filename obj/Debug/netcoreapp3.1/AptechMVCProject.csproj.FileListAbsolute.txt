@@ -1201,3 +1201,5 @@
 /Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.dll
 /Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.pdb
 /Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.genruntimeconfig.cache
+/Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/Razor/Views/Login/Index.cshtml.g.cs
+/Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/Razor/Views/Logout/Index.cshtml.g.cs

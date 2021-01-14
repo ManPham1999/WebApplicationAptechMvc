@@ -29,6 +29,7 @@
       <change beforePath="$PROJECT_DIR$/Migrations/20210114043205_InitialCreate.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Migrations/MainDbContextModelSnapshot.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Views/Product/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Product/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Views/Product/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/Views/Product/Index.cshtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/AptechMVCProject.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/AptechMVCProject.Views.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/AptechMVCProject.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/AptechMVCProject.Views.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/AptechMVCProject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/bin/Debug/netcoreapp3.1/AptechMVCProject.dll" afterDir="false" />
@@ -57,6 +58,9 @@
     <setting file="file://$PROJECT_DIR$/appsettings.Development.json" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entity/Cart.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entity/CartType.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Entity/CartLine.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Views/_ViewImports.cshtml" root0="FORCE_HIGHLIGHTING" root1="FORCE_HIGHLIGHTING" />
     <setting file="mock:///Details.cshtml" root0="FORCE_HIGHLIGHTING" root1="SKIP_HIGHLIGHTING" />
@@ -90,7 +94,6 @@
         <option value="$PROJECT_DIR$/Entity/Product.cs" />
         <option value="$PROJECT_DIR$/Controllers/ProductController.cs" />
         <option value="$PROJECT_DIR$/Repository/IProductRepository.cs" />
-        <option value="$PROJECT_DIR$/Views/Product/Index.cshtml" />
         <option value="$PROJECT_DIR$/Entity/CardType.cs" />
         <option value="$PROJECT_DIR$/Entity/Card.cs" />
         <option value="$PROJECT_DIR$/Entity/CartDetails.cs" />
@@ -106,6 +109,7 @@
         <option value="$PROJECT_DIR$/Entity/CartLine.cs" />
         <option value="$PROJECT_DIR$/Entity/Cart.cs" />
         <option value="$PROJECT_DIR$/Views/Product/Details.cshtml" />
+        <option value="$PROJECT_DIR$/Views/Product/Index.cshtml" />
       </list>
     </option>
   </component>
@@ -183,7 +187,7 @@
       <workItem from="1610589149444" duration="2746000" />
       <workItem from="1610598779155" duration="1415000" />
       <workItem from="1610611028612" duration="2283000" />
-      <workItem from="1610638738075" duration="1875000" />
+      <workItem from="1610638738075" duration="2126000" />
     </task>
     <servers />
   </component>
