@@ -6468,7 +6468,7 @@
       "outputPath": "/Users/macintoshhd/WebApplicationAptechMvc/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/macintoshhd/.nuget/NuGet/NuGet.Config"
+        "/Users/macintoshhd/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -6533,7 +6533,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.101/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/5.0.102/RuntimeIdentifierGraph.json"
       }
     }
   }
