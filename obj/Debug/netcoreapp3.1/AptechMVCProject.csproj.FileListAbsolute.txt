@@ -1170,7 +1170,6 @@
 /Users/macintoshhd/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/macintoshhd/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll
 /Users/macintoshhd/WebApplicationAptechMvc/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
-/Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.csprojAssemblyReference.cache
 /Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.AssemblyInfoInputs.cache
 /Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.AssemblyInfo.cs
 /Users/macintoshhd/WebApplicationAptechMvc/obj/Debug/netcoreapp3.1/AptechMVCProject.csproj.CoreCompileInputs.cache
