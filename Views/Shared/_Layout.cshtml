@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@model AptechMVCProject.Entity.ModelView;
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -16,12 +17,22 @@
 
 <body>
 	<!-- Header -->
-	<header id="header" class="alt">
-		<div class="logo">
-			<a href="https://khangthinhcoffee.com/" target="_blank"><span>Khang Thịnh</span> Coffee</a>
-		</div>
-		<a href="#menu">Menu</a>
-	</header>
+    <header id="header" class="alt">
+	    <div class="logo">
+		    <a href="https://khangthinhcoffee.com/" target="_blank"><span>Khang Thịnh</span> Coffee</a>
+	    </div>
+	    @{
+		    if (@ViewBag.UserName != null)
+		    {
+			    <a>@ViewBag.UserName</a>
+		    }
+		    else
+		    {
+			    <a asp-controller="Home" asp-action="Login">Đăng nhập</a>
+		    }
+            }
+        <a href="#menu">Menu</a>
+    </header>
 
 	<!-- Nav -->
 	<nav id="menu">
@@ -29,9 +40,12 @@
 			<li><a asp-controller="Home" asp-action="Index">Home</a></li>
 			<li><a asp-controller="About" asp-action="Index">About</a></li>
 			<li><a asp-controller="Product" asp-action="Index" asp-route-id="cat01">Products</a></li>
-			<li>
-				<a asp-controller="Card" asp-action="Index">Card</a>
-			</li>
+			 @{
+            		    if (@ViewBag.UserName != null)
+            		    {
+            			    <a asp-controller="Home" asp-action="Logout">Đăng xuất</a>
+            		    }
+                        }
 		</ul>
 	</nav>
 

@@ -12,5 +12,6 @@ namespace AptechMVCProject.Entity
         public Task<Product> product { get; set;  }
         public string routeParamsString { get; set; }
         public Guid routeParamsUnique { get; set; }
+        public User User { get; set; }
     }
 }

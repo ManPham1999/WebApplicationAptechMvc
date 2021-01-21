@@ -27,6 +27,13 @@ namespace AptechMVCProject
             services.AddControllersWithViews();
             services.AddRazorPages()
                 .AddRazorRuntimeCompilation();
+            services.AddDistributedMemoryCache();
+            services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromSeconds(10);
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
             services.AddDbContext<MainDbContext>(option => option.UseSqlServer(Configuration.GetConnectionString("StoreCoffeeConnection")));
         }
 
@@ -49,7 +56,7 @@ namespace AptechMVCProject
             app.UseRouting();
 
             app.UseAuthorization();
-
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(

@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using AptechMVCProject.Entity;
 using AptechMVCProject.Models;
 using AptechMVCProject.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -28,6 +29,10 @@ namespace AptechMVCProject.Controllers
                 mymodel.products = _productRepository.GetProductByCatgoryId(id);
                 mymodel.catgories = await _context.Catgories.ToListAsync();
                 mymodel.routeParamsString = id;
+                if (HttpContext.Session.GetString("UserName") != null)
+                {
+                    ViewBag.UserName = HttpContext.Session.GetString("UserName");
+                }
                 return View(mymodel);
             }
             return Error();

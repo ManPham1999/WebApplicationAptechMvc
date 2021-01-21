@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 
@@ -18,6 +19,10 @@ namespace AptechMVCProject.Controllers
         }
         public ActionResult Index()
         {
+            if (HttpContext.Session.GetString("UserName") != null)
+            {
+                ViewBag.UserName = HttpContext.Session.GetString("UserName");
+            }
             return View();
         }
     }

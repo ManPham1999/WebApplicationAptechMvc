@@ -13,8 +13,6 @@
         <e p="AboutController.cs" t="Include" />
         <e p="CardController.cs" t="Include" />
         <e p="HomeController.cs" t="Include" />
-        <e p="LoginController.cs" t="Include" />
-        <e p="LogoutController.cs" t="Include" />
         <e p="ProductController.cs" t="Include" />
       </e>
       <e p="Entity" t="Include">
@@ -67,12 +65,7 @@
         </e>
         <e p="Home" t="Include">
           <e p="Index.cshtml" t="Include" />
-        </e>
-        <e p="Login" t="Include">
-          <e p="Index.cshtml" t="Include" />
-        </e>
-        <e p="Logout" t="Include">
-          <e p="Index.cshtml" t="Include" />
+          <e p="Login.cshtml" t="Include" />
         </e>
         <e p="Product" t="Include">
           <e p="Details.cshtml" t="Include" />
